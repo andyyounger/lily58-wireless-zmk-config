@@ -11,25 +11,38 @@
 
 / {
     behaviors {
+
+	gresc: grave_escape {
+		compatible = "zmk,behavior-mod-morph";
+		#binding-cells = <0>;
+		bindings = <&kp ESC>, <&kp GRAVE>;
+		mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+	};
+	bspdel: bspace_del {
+		compatible = "zmk,behavior-mod-morph";
+		#binding-cells = <0>;
+		bindings = <&kp BSPC>, <&kp DEL>;
+		mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+	};
+
       lh_pht: home_row_left_mod_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        /* flavor = "balanced"; */
-        flavor = "hold-preferred";
-		tapping-term-ms = <200>;
+        flavor = "balanced";
+		tapping-term-ms = <275>;
 		quick-tap-ms = <175>;
 		require-prior-idle-ms = <150>;
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <6 7 8 9 10 11>;
 		hold-trigger-on-release;
 
+	
       };
       rh_pht: home_row_right_mod_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
-        flavor = "hold-preferred";
-        /* flavor = "balanced"; */
-		tapping-term-ms = <200>;
+        flavor = "balanced";
+		tapping-term-ms = <275>;
 		quick-tap-ms = <175>;
 		require-prior-idle-ms = <150>;
         bindings = <&kp>, <&kp>;
@@ -39,7 +52,6 @@
       };
     };
 };
-
 
 / {
     keymap {
@@ -54,11 +66,11 @@
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
             display-name = "Base";
             bindings = <
-&kp ESC		&kp N1			&kp N2			&kp N3			&kp N4			&kp N5									&kp N6			&kp N7			&kp N8			&kp N9			&kp N0				&kp GRAVE
+&gresc		&kp N1			&kp N2			&kp N3			&kp N4			&kp N5									&kp N6			&kp N7			&kp N8			&kp N9			&kp N0				&kp GRAVE
 &kp TAB		&kp Q  			&kp W			&kp E			&kp R			&kp T									&kp Y			&kp U			&kp I			&kp O			&kp P				&kp MINUS
 &kp LCTRL	&lh_pht LGUI A  &lh_pht LALT S  &lh_pht LCTRL D &lh_pht LSHFT F &kp G									&kp H			&rh_pht RSHFT J &rh_pht RCTRL K &rh_pht LALT L	&rh_pht RGUI SEMI	&kp SQT
 &kp LSHFT	&kp Z			&kp X			&kp C			&kp V			&kp B		&kp LBKT		&kp RBKT	&kp N			&kp M			&kp COMMA		&kp DOT			&kp FSLH			&kp RSHFT
-											&mo 1			&kp ESC			&kp TAB 	&kp RET			&kp SPACE	&kp BSPC		&kp DEL			&mo 2
+											&mo 1			&gresc			&kp TAB 	&kp RET			&kp SPACE	&bspdel		&kp DEL			&mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
