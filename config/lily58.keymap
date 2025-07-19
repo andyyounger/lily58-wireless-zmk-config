@@ -62,6 +62,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <54 53>;
         };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <16 15 17 41>;
+        };
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <28 31>;
+        };
+
+        capslock {
+            bindings = <&kp CAPS>;
+            key-positions = <28 27 31 32>;
+        };
     };
 
     keymap {
