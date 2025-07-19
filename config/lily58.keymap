@@ -31,10 +31,10 @@
         lh_pht: home_row_left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <275>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <30 31 32 33 34 35>;
@@ -47,7 +47,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <275>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <24 25 26 27 28 29>;
