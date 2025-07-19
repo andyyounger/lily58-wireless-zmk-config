@@ -146,11 +146,11 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans         &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans         &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME        &kp PAGE_DOWN  &kp PG_DN     &kp END    &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans          &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans          &trans         &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &trans          &trans         &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN  &kp PG_DN     &kp END    &trans  &trans
+                        &trans  &trans  &trans  &trans           &trans         &trans          &trans         &trans
             >;
         };
     };
