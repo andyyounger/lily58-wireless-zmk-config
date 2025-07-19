@@ -51,7 +51,6 @@
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <24 25 26 27 28 29>;
-            hold-trigger-on-release;
         };
     };
 };
