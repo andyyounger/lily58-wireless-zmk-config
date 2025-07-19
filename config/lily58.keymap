@@ -44,13 +44,14 @@
         rh_pht: home_row_right_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <275>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <24 25 26 27 28 29>;
+            hold-trigger-on-release;
         };
     };
 };
