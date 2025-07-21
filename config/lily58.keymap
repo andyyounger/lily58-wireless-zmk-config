@@ -38,7 +38,6 @@
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <30 31 32 33 34 35>;
-            hold-trigger-on-release;
         };
 
         rh_pht: home_row_right_mod_tap {
@@ -51,7 +50,6 @@
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <24 25 26 27 28 29>;
-            hold-trigger-on-release;
         };
     };
 };
