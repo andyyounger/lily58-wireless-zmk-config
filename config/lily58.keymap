@@ -77,7 +77,7 @@
 
         rsft_esc: rshift_esc {
             compatible = "zmk,behavior-tap-dance";
-            label = "LShiftEsc";
+            label = "RShiftEsc";
             #binding-cells = <0>;
             bindings = <&kp RSHFT>, <&kp ESCAPE>;
         };
