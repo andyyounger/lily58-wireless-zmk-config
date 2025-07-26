@@ -102,11 +102,11 @@
 
             display-name = "Base";
             bindings = <
-&gresc     &kp N1              &kp N2  &kp N3  &kp N4  &kp N5                               &kp N6      &kp N7     &kp N8     &kp N9   &kp N0                 &bspdel
-&kp TAB    &kp Q               &kp W   &kp E   &kp R   &kp T                                &kp Y       &kp U      &kp I      &kp O    &kp P                  &quote
-&kp LCTRL  &lh_pht LGUI A  &lh_pht LALT S  &lh_pht LCTRL D  &lh_pht LSHFT F  &kp G                                &kp H       &rh_pht RSHFT J  &rh_pht LEFT_CONTROL K  &rh_pht LALT L  &rh_pht RGUI SEMI  &kp RCTRL
-&kp LSHFT  &lh_pht LEFT_ALT Z  &kp X   &kp C   &kp V   &kp B    &kp LBKT       &kp RBKT     &lt 5 N     &kp M      &kp COMMA  &kp DOT  &rh_pht LEFT_ALT FSLH  &kp RSHFT
-                                       &mo 1   &gresc  &kp TAB  &lt 3 ENTER    &lt 3 SPACE  &lt 4 BSPC  &lt 6 DEL  &mo 2
+&gresc     &kp N1              &kp N2          &kp N3           &kp N4           &kp N5                               &kp N6      &kp N7           &kp N8                  &kp N9          &kp N0                 &bspdel
+&kp TAB    &kp Q               &kp W           &kp E            &kp R            &kp T                                &kp Y       &kp U            &kp I                   &kp O           &kp P                  &quote
+&kp LCTRL  &lh_pht LGUI A      &lh_pht LALT S  &lh_pht LCTRL D  &lh_pht LSHFT F  &kp G                                &kp H       &rh_pht RSHFT J  &rh_pht LEFT_CONTROL K  &rh_pht LALT L  &rh_pht RGUI SEMI      &kp RCTRL
+&kp LSHFT  &lh_pht LEFT_ALT Z  &kp X           &kp C            &kp V            &kp B    &kp LBKT       &kp RBKT     &lt 5 N     &kp M            &kp COMMA               &kp DOT         &rh_pht LEFT_ALT FSLH  &kp RSHFT
+                                               &mo 1            &gresc           &kp TAB  &lt 3 ENTER    &lt 3 SPACE  &lt 4 BSPC  &lt 6 DEL        &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -154,10 +154,10 @@
 
         magic {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                  &trans          &trans         &trans        &trans     &trans           &trans
-&trans          &trans        &trans        &trans        &trans        &trans                                        &trans          &trans         &kt LC(X)     &kt LC(C)  &kt LC(V)        &trans
-&trans          &trans        &trans        &trans        &trans        &trans                                        &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kt PRINTSCREEN  &trans
-&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans        &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INSERT       &trans
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                  &trans          &trans         &trans        &trans     &trans      &trans
+&trans          &trans        &trans        &trans        &trans        &trans                                        &kp MINUS       &kp EQUAL      &kp LBKT      &kp RBKT   &kp BSLH    &trans
+&trans          &trans        &trans        &trans        &trans        &trans                                        &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &quote      &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans        &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INSERT  &trans
                                             &trans        &trans        &trans        &trans           &trans         &trans          &trans         &trans
             >;
         };
