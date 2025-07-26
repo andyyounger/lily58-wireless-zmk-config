@@ -60,9 +60,10 @@
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp DOUBLE_QUOTES>;
         }
-        ctrlgui: quote {
+
+        ctrlgui: ctrl_gui {
             compatible = "zmk,behavior-tap-dance";
-            label = "QUOTE";
+            label = "CtrlGUI";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&kp LGUI>;
         }
