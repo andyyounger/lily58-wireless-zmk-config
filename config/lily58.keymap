@@ -59,14 +59,14 @@
             label = "QUOTE";
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp DOUBLE_QUOTES>;
-        }
+        };
 
         ctrlgui: ctrl_gui {
             compatible = "zmk,behavior-tap-dance";
             label = "CtrlGUI";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&kp LGUI>;
-        }
+        };
     };
 };
 
