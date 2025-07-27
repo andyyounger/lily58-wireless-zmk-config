@@ -174,8 +174,8 @@
         magic {
             bindings = <
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                  &trans          &trans         &trans        &trans     &trans      &trans
-&trans          &trans        &trans        &trans        &trans        &trans                                        &kp MINUS       &kp EQUAL      &kp LBKT      &kp RBKT   &kp BSLH    &trans
-&trans          &trans        &trans        &trans        &trans        &trans                                        &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &quote      &trans
+&trans          &trans        &trans        &trans        &trans        &trans                                        &trans          &trans         &trans        &trans     &trans      &trans
+&trans          &trans        &trans        &trans        &trans        &trans                                        &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans      &trans
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans        &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INSERT  &trans
                                             &trans        &trans        &trans        &trans           &trans         &trans          &trans         &trans
             >;
