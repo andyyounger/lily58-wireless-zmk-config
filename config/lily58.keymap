@@ -96,7 +96,7 @@
         thumbesc {
             bindings = <&kp ESCAPE>;
             key-positions = <54 53>;
-            slow-release;
+            timeout-ms = <150>;
         };
 
         bootloader {
