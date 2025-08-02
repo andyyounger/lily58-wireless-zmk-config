@@ -113,6 +113,11 @@
             bindings = <&kp CAPS>;
             key-positions = <28 27 31 32>;
         };
+
+        esc_gh {
+            bindings = <&kp ESCAPE>;
+            key-positions = <29 30>;
+        };
     };
 
     keymap {
@@ -178,11 +183,11 @@
 
         magic {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                  &trans          &trans         &trans        &trans     &trans      &trans
-&trans          &trans        &trans        &trans        &trans        &trans                                        &trans          &trans         &trans        &trans     &trans      &trans
-&trans          &trans        &trans        &trans        &trans        &trans                                        &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans      &trans
-&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans        &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INSERT  &trans
-                                            &trans        &trans        &trans        &trans           &trans         &trans          &trans         &trans
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                     &trans          &trans         &trans        &trans     &trans      &trans
+&trans          &trans        &trans        &trans        &trans        &kp SYSREQ                                       &kp LC(R)       &kp LC(Z)      &kp LC(X)     &kp LC(C)  &kp LC(P)   &trans
+&trans          &trans        &trans        &trans        &trans        &kp SCROLLLOCK                                   &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans      &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &kp PRINTSCREEN  &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INSERT  &trans
+                                            &trans        &trans        &trans           &trans           &trans         &trans          &trans         &trans
             >;
         };
 
