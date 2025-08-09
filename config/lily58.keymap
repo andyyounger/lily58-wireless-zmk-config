@@ -13,6 +13,8 @@
     tapping-term-ms = <200>;
 };
 
+&mt { quick-tap-ms = <175>; };
+
 / {
     behaviors {
         gresc: grave_escape {
