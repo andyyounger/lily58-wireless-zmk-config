@@ -42,8 +42,8 @@
             #binding-cells = <2>;
             bindings = <&mo>, <&bspdel>;
 
-            /* quick-tap-ms = <175>; */
-            /* tapping-term-ms = <200>; */
+            quick-tap-ms = <200>;
+            tapping-term-ms = <225>;
         };
 
         lh: home_row_left_mod_tap {
