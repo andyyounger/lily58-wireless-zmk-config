@@ -74,7 +74,7 @@
             hold-while-undecided-linger;
         };
 
-        tdquote: quote {
+        tdquote: tdquote {
             compatible = "zmk,behavior-tap-dance";
             label = "DTtdquote";
             #binding-cells = <0>;
