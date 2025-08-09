@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DTtdquote";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp DOUBLE_tdquoteS>;
+            bindings = <&kp SQT>, <&kp DOUBLE_QUOTES>;
         };
 
         ctrl_gui: ctrl_gui {
