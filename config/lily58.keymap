@@ -12,11 +12,13 @@
 &lt {
     quick-tap-ms = <200>;
     tapping-term-ms = <225>;
+    require-prior-idle-ms = <150>;
 };
 
 &mt {
     quick-tap-ms = <200>;
     tapping-term-ms = <225>;
+    require-prior-idle-ms = <150>;
 };
 
 / {
