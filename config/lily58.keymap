@@ -100,6 +100,36 @@
             #binding-cells = <0>;
             bindings = <&mt LEFT_ALT MINUS>, <&kp GRAVE>, <&kp ESCAPE>;
         };
+
+        lhmini: lhmini {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <34 48>;
+            hold-trigger-on-release;
+            hold-while-undecided-linger;
+            label = "LHMINI";
+        };
+
+        rhmini: rhmini {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <25 37>;
+            hold-trigger-on-release;
+            hold-while-undecided-linger;
+            label = "RHMINI";
+        };
     };
 };
 
@@ -147,11 +177,11 @@
 
             display-name = "Base";
             bindings = <
-&mt LEFT_GUI MINUS       &kp N1          &kp N2  &kp N3  &kp N4  &kp N5                                 &kp N6             &kp N7  &kp N8     &kp N9   &kp N0                   &mt RIGHT_GUI EQUAL
-&mt LEFT_ALT TAB         &kp Q           &kp W   &kp E   &kp R   &kp T                                  &kp Y              &kp U   &kp I      &kp O    &kp P                    &td_alt_brckt_bslsh
-&mt LEFT_CONTROL ESCAPE  &mt LEFT_GUI A  &kp S   &kp D   &kp F   &kp G                                  &kp H              &kp J   &kp K      &kp L    &mt RIGHT_GUI SEMICOLON  &td_lctrl_quote
-&kp LEFT_SHIFT           &mt LEFT_ALT Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT       &kp RBKT     &lt 5 N            &kp M   &kp COMMA  &kp DOT  &mt LEFT_ALT FSLH        &kp RSHIFT
-                                                 &trans  &trans  &lt 7 TAB  &lt 3 ENTER    &lt 3 SPACE  &lt_bspdel 4 BSPC  &trans  &trans
+&mt LEFT_GUI MINUS       &kp N1              &kp N2  &kp N3  &kp N4  &kp N5                                 &kp N6             &kp N7  &kp N8     &kp N9   &kp N0                       &mt RIGHT_GUI EQUAL
+&mt LEFT_ALT TAB         &kp Q               &kp W   &kp E   &kp R   &kp T                                  &kp Y              &kp U   &kp I      &kp O    &kp P                        &td_alt_brckt_bslsh
+&mt LEFT_CONTROL ESCAPE  &lhmini LEFT_GUI A  &kp S   &kp D   &kp F   &kp G                                  &kp H              &kp J   &kp K      &kp L    &rhmini RIGHT_GUI SEMICOLON  &td_lctrl_quote
+&kp LEFT_SHIFT           &lhmini LEFT_ALT Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT       &kp RBKT     &lt 5 N            &kp M   &kp COMMA  &kp DOT  &rhmini LEFT_ALT FSLH        &kp RSHIFT
+                                                     &trans  &trans  &lt 7 TAB  &lt 3 ENTER    &lt 3 SPACE  &lt_bspdel 4 BSPC  &trans  &trans
             >;
         };
 
