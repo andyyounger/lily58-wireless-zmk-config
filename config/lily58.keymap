@@ -110,7 +110,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <34 48 35>;
+            hold-trigger-key-positions = <48 35>;
             hold-trigger-on-release;
             hold-while-undecided-linger;
             label = "LHMINI";
@@ -125,7 +125,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <25 37 24>;
+            hold-trigger-key-positions = <37 24>;
             hold-trigger-on-release;
             hold-while-undecided-linger;
             label = "RHMINI";
@@ -177,11 +177,11 @@
 
             display-name = "Base";
             bindings = <
-&kp MINUS                    &kp N1  &kp N2  &kp N3        &kp N4  &kp N5                                 &kp N6             &kp N7  &kp N8        &kp N9   &kp N0     &kp EQUAL
-&kp GRAVE                    &kp Q   &kp W   &kp E         &kp R   &kp T                                  &kp Y              &kp U   &kp I         &kp O    &kp P      &kp BACKSLASH
-&lhmini LEFT_CONTROL ESCAPE  &kp A   &kp S   &kp D         &kp F   &kp G                                  &kp H              &kp J   &kp K         &kp L    &kp COLON  &rhmini RIGHT_CONTROL SINGLE_QUOTE
-&kp LEFT_SHIFT               &kp Z   &kp X   &kp C         &kp V   &kp B      &kp LBKT       &kp RBKT     &lt 5 N            &kp M   &kp COMMA     &kp DOT  &kp SLASH  &kp RSHIFT
-                                             &kp LEFT_GUI  &trans  &lt 7 TAB  &lt 3 ENTER    &lt 3 SPACE  &lt_bspdel 4 BSPC  &trans  &kp LEFT_ALT
+&kp MINUS                    &kp N1              &kp N2  &kp N3        &kp N4  &kp N5                                 &kp N6             &kp N7  &kp N8         &kp N9   &kp N0                  &kp EQUAL
+&kp GRAVE                    &kp Q               &kp W   &kp E         &kp R   &kp T                                  &kp Y              &kp U   &kp I          &kp O    &kp P                   &kp BACKSLASH
+&lhmini LEFT_CONTROL ESCAPE  &kp A               &kp S   &kp D         &kp F   &kp G                                  &kp H              &kp J   &kp K          &kp L    &kp COLON               &rhmini RIGHT_CONTROL SINGLE_QUOTE
+&kp LEFT_SHIFT               &lhmini LEFT_ALT Z  &kp X   &kp C         &kp V   &kp B      &kp LBKT       &kp RBKT     &lt 5 N            &kp M   &kp COMMA      &kp DOT  &rhmini LEFT_ALT SLASH  &kp RSHIFT
+                                                         &kp LEFT_GUI  &trans  &lt 7 TAB  &lt 3 ENTER    &lt 3 SPACE  &lt_bspdel 4 BSPC  &trans  &kp RIGHT_GUI
             >;
         };
 
@@ -280,5 +280,14 @@
         extra_2 { status = "reserved"; };
 
         extra_3 { status = "reserved"; };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        num2sym {
+            if-layers = <3 4>;
+            then-layer = <5>;
+        };
     };
 };
