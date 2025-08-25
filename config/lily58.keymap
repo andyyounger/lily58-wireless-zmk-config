@@ -60,7 +60,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <30 31 32 33 34 35>;
+            hold-trigger-key-positions = <30 31 32 33 34 43 55 44 45 18 19 20 21 23 22 11 10 9 8 7 6 46 47 48 54 56 57 49 35>;
             hold-trigger-on-release;
             hold-while-undecided-linger;
         };
@@ -74,7 +74,7 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <24 25 26 27 28 29>;
+            hold-trigger-key-positions = <25 26 27 28 29 12 13 15 14 16 17 5 4 2 3 1 0 37 38 39 40 41 42 53 52 51 50 24 36>;
             hold-trigger-on-release;
             hold-while-undecided-linger;
         };
