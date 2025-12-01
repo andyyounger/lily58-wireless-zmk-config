@@ -40,7 +40,7 @@
 
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
- 
+
         lt_bspdel: layer_tap_bspc_del {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_BACKSPACE_DELETE";
@@ -141,7 +141,7 @@
             timeout-ms = <150>;
         };
 
-        bootloader { // rebt
+        bootloader {
             bindings = <&bootloader>;
             key-positions = <16 15 17 41>;
         };
@@ -155,13 +155,12 @@
             bindings = <&kp CAPS>;
             key-positions = <28 27 31 32>;
         };
-
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer { //0
+        default_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -171,15 +170,15 @@
 
             display-name = "Base";
             bindings = <
-&kp EQUAL                &kp N1          &kp N2  &kp N3  &kp N4  &kp N5                                 &kp N6             &kp N7  &kp N8     &kp N9   &kp N0               &kp MINUS
-&kp GRAVE                &kp Q           &kp W   &kp E   &kp R   &kp T                                  &kp Y              &kp U   &kp I      &kp O    &kp P                &kp BACKSLASH
-&mt LEFT_CONTROL ESCAPE  &mt LWIN A      &kp S   &kp D   &kp F   &kp G                                  &kp H              &kp J   &kp K      &kp L    &mt RMETA SEMICOLON  &mt RIGHT_CONTROL SINGLE_QUOTE
-&kp LEFT_SHIFT           &mt LEFT_ALT Z  &kp X   &kp C   &kp V   &kp B      &kp LBKT       &kp RBKT     &lt 6 N            &kp M   &kp COMMA  &kp DOT  &mt LEFT_ALT SLASH   &kp RSHIFT
-                                                 &trans  &trans  &lt 8 TAB  &lt 3 ENTER    &lt 4 SPACE  &lt_bspdel 5 BSPC  &trans  &trans
+&kp EQUAL                &kp N1          &kp N2  &kp N3                  &kp N4                &kp N5                                 &kp N6             &kp N7                 &kp N8                 &kp N9   &kp N0               &kp MINUS
+&kp GRAVE                &kp Q           &kp W   &kp E                   &kp R                 &kp T                                  &kp Y              &kp U                  &kp I                  &kp O    &kp P                &kp BACKSLASH
+&mt LEFT_CONTROL ESCAPE  &mt LWIN A      &kp S   &lhmini LEFT_CONTROL D  &lhmini LEFT_SHIFT F  &kp G                                  &kp H              &rhmini RIGHT_SHIFT J  &rhmini RIGHT_SHIFT K  &kp L    &mt RMETA SEMICOLON  &mt RIGHT_CONTROL SINGLE_QUOTE
+&kp LEFT_SHIFT           &mt LEFT_ALT Z  &kp X   &kp C                   &kp V                 &kp B      &kp LBKT       &kp RBKT     &lt 6 N            &kp M                  &kp COMMA              &kp DOT  &mt LEFT_ALT SLASH   &kp RSHIFT
+                                                 &trans                  &trans                &lt 8 TAB  &lt 3 ENTER    &lt 4 SPACE  &lt_bspdel 5 BSPC  &trans                 &trans
             >;
         };
 
-        lower_layer { // 1
+        lower_layer {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -199,7 +198,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raise_layer { // 2
+        raise_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -219,7 +218,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        lmagic { // 3
+        lmagic {
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &bt BT_CLR  &trans       &trans                &trans                 &trans            &bt BT_CLR_ALL
 &trans  &trans        &trans        &trans        &trans        &trans                          &kp GRAVE   &trans       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH     &trans
@@ -229,7 +228,7 @@
             >;
         };
 
-        rmagic { // 4
+        rmagic {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                     &trans          &trans          &trans        &trans           &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &kp SYSREQ                                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
@@ -239,7 +238,7 @@
             >;
         };
 
-        num { // 5
+        num {
             bindings = <
 &trans  &trans            &trans        &trans        &trans        &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_BRACKET  &kp N7        &kp NUMBER_8  &kp N9        &kp RIGHT_BRACKET                       &trans  &trans  &trans  &trans  &trans  &trans
@@ -249,7 +248,7 @@
             >;
         };
 
-        sym { // 6
+        sym {
             bindings = <
 &trans  &trans          &trans           &trans        &trans                &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RBRC                                   &trans  &trans  &trans  &trans  &trans  &trans
@@ -259,7 +258,7 @@
             >;
         };
 
-        func { // 7
+        func {
             bindings = <
 &trans  &trans   &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp F12                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -269,7 +268,7 @@
             >;
         };
 
-        funcr { // 8
+        funcr {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans   &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp F12  &kp F7  &kp F8  &kp F9  &kp F12  &trans
@@ -283,9 +282,9 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-    /*     num2sym { */
-    /*         if-layers = <4 5>; */
-    /*         then-layer = <6>; */
-    /*     }; */
+        /*     num2sym { */
+        /*         if-layers = <4 5>; */
+        /*         then-layer = <6>; */
+        /*     }; */
     };
 };
