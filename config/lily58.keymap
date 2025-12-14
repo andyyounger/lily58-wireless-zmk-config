@@ -30,7 +30,7 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
 
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LGUI)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
         bspdel: bspace_del {
