@@ -110,9 +110,8 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <36 24 25 26 27 28>;
+            hold-trigger-key-positions = <31 32 33 34 35 49>;
             label = "LHMINI";
-            hold-trigger-on-release;
         };
 
         rhmini: rhmini {
@@ -124,9 +123,8 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <31 32 33 34 35 49>;
+            hold-trigger-key-positions = <36 24 25 26 27 28>;
             label = "RHMINI";
-            hold-trigger-on-release;
         };
     };
 };
