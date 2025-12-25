@@ -105,12 +105,13 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <31 32 33 34 35 49>;
+			hold-trigger-on-release;
             label = "LHMINI";
         };
 
@@ -118,12 +119,13 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <36 24 25 26 27 28>;
+			hold-trigger-on-release;
             label = "RHMINI";
         };
     };
