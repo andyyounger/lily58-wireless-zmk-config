@@ -110,7 +110,7 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <30 18 6 7 19 31 45 44 46 47 48 49 35 23 11 10 22 34 33 21 9 8 20 32>;
+            hold-trigger-key-positions = <30 18 6 7 19 31 45 44 46 47 48 49 35 23 11 10 22 34 33 21 9 8 20 32 0 1 2 3 4 5 12 24 36 50 51 52 53 54 55 56 57 42 43>;
             hold-trigger-on-release;
             label = "LHMINI";
         };
@@ -124,7 +124,7 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <41 29 5 17 4 3 2 1 0 12 14 16 40 28 39 38 37 36 24 25 13>;
+            hold-trigger-key-positions = <41 29 5 17 4 3 2 1 0 12 14 16 40 28 39 38 37 36 24 25 13 26 27 15 50 51 52 53 42 6 7 8 9 10 11 23 35 49 55 56 57 54 43 46 47 48>;
             hold-trigger-on-release;
             label = "RHMINI";
         };
