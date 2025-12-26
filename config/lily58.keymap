@@ -51,32 +51,6 @@
             tapping-term-ms = <225>;
         };
 
-        lh: home_row_left_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <250>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <30 31 32 33 34 43 55 44 45 18 19 20 21 23 22 11 10 9 8 7 6 46 47 48 54 56 57 49 35>;
-            hold-trigger-on-release;
-        };
-
-        rh: home_row_right_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <250>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <25 26 27 28 29 12 13 15 14 16 17 5 4 2 3 1 0 37 38 39 40 41 42 53 52 51 50 24 36>;
-            hold-trigger-on-release;
-        };
-
         td_lctrl_quote: td_lctrl_quote {
             compatible = "zmk,behavior-tap-dance";
             label = "DT_GUI_ENTER";
@@ -105,8 +79,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <170>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
@@ -119,8 +93,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <170>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
@@ -170,10 +144,10 @@
 
             display-name = "Base";
             bindings = <
-&gresc                       &kp N1              &kp N2              &kp N3                  &kp N4                &kp N5                                 &kp N6             &kp N7                 &kp N8                  &kp N9              &kp N0                   &kp BACKSPACE
-&mt LEFT_WIN TAB             &kp Q               &kp W               &kp E                   &kp R                 &kp T                                  &kp Y              &kp U                  &kp I                   &kp O               &kp P                    &mt RIGHT_WIN BACKSLASH
-&lhmini LEFT_CONTROL ESCAPE  &lhmini LWIN A      &lhmini LEFT_ALT S  &lhmini LEFT_CONTROL D  &lhmini LEFT_SHIFT F  &kp G                                  &kp H              &rhmini RIGHT_SHIFT J  &rhmini LEFT_CONTROL K  &rhmini LEFT_ALT L  &rhmini RMETA SEMICOLON  &rhmini RIGHT_CONTROL RET
-&kp LEFT_SHIFT               &kp Z               &kp X               &kp C                   &kp V                 &kp B      &kp LBKT       &kp RBKT     &kp N              &kp M                  &kp COMMA               &kp DOT             &kp SLASH                &kp RSHIFT
+&gresc                       &kp N1              &kp N2              &kp N3                  &kp N4                &kp N5                                 &kp N6             &kp N7                 &kp N8                  &kp N9              &kp N0           &kp BACKSPACE
+&kp TAB				         &kp Q               &kp W               &kp E                   &kp R                 &kp T                                  &kp Y              &kp U                  &kp I                   &kp O               &kp P            &kp BACKSLASH
+&lhmini LEFT_CONTROL ESCAPE  &lhmini LWIN A      &lhmini LEFT_ALT S  &lhmini LEFT_CONTROL D  &lhmini LEFT_SHIFT F  &kp G                                  &kp H              &rhmini RIGHT_SHIFT J  &rhmini LEFT_CONTROL K  &rhmini LEFT_ALT L  &kp SEMICOLON    &rhmini RIGHT_CONTROL RET
+&kp LEFT_SHIFT               &kp Z               &kp X               &kp C                   &kp V                 &kp B      &kp LBKT       &kp RBKT     &kp N              &kp M                  &kp COMMA               &kp DOT             &kp SLASH        &kp RSHIFT
                                                                      &kp LEFT_ALT            &kp LEFT_WIN          &lt 5 TAB  &lt 1 ENTER    &lt 2 SPACE  &lt_bspdel 3 BSPC  &kp RIGHT_WIN          &kp LEFT_ALT
             >;
         };
@@ -220,10 +194,10 @@
 
         funcr {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans   &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans   &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp F9  &kp F10  &kp F11  &kp F12 &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp F5  &kp F6   &kp F7   &kp F8  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4  &kp F10  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
