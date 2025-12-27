@@ -130,7 +130,7 @@
             key-positions = <28 27 31 32>;
         };
 
-        toglayer_fn {
+        toglay_fn {
             bindings = <&tog 5>;
             key-positions = <50 52>;
         };
@@ -138,6 +138,21 @@
         toglay_rmagic {
             bindings = <&tog 2>;
             key-positions = <50 54>;
+        };
+
+        toglay_esc {
+            bindings = <&to 0>;
+            key-positions = <50 0>;
+        };
+
+        toglay_lmagic {
+            bindings = <&tog 1>;
+            key-positions = <50 53>;
+        };
+
+        toglay_num {
+            bindings = <&tog 3>;
+            key-positions = <50 55>;
         };
     };
 
