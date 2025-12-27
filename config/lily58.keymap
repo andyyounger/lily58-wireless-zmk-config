@@ -129,11 +129,11 @@
             bindings = <&kp CAPS>;
             key-positions = <28 27 31 32>;
         };
-		
-		toglayer_fn { 
+
+        toglayer_fn {
             bindings = <&tog 5>;
-            key-positions = <28 50>;
-		};
+            key-positions = <50 52>;
+        };
     };
 
     keymap {
