@@ -134,6 +134,11 @@
             bindings = <&tog 5>;
             key-positions = <50 52>;
         };
+
+        toglay_rmagic {
+            bindings = <&tog 2>;
+            key-positions = <50 54>;
+        };
     };
 
     keymap {
