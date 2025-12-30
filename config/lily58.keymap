@@ -152,6 +152,11 @@
             bindings = <&tog 3>;
             key-positions = <50 55>;
         };
+
+        shiftcolon {
+            bindings = <&kp COLON>;
+            key-positions = <31 34>;
+        };
     };
 
     keymap {
