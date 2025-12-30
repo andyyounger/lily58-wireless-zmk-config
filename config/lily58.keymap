@@ -80,8 +80,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <155>;
+            tapping-term-ms = <320>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
@@ -94,8 +94,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <155>;
+            tapping-term-ms = <320>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
@@ -105,7 +105,7 @@
         };
     };
 };
-
+jjjkjkkKKkkk  K  2jk  2jk 2K  2K  2jk  2jk  2jk  2K  2K  22  2K 2K 2K 2jk 2jk 2jk
 / {
     combos {
         compatible = "zmk,combos";
