@@ -25,19 +25,20 @@
 
 / {
     behaviors {
-        grave_tilde: grave_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp TILDE>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
+        /* grave_tilde: grave_tilde { */
+        /*     compatible = "zmk,behavior-mod-morph"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings = <&kp GRAVE>, <&kp TILDE>; */
+        /**/
+        /*     mods = <(MOD_LCTL|MOD_RCTL)>; */
+        /* }; */
         gresc: escape_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&grave_tilde>;
+            bindings = <&kp ESC>, <&GRAVE>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+			keep-mods = <MOD_LSFT>;
         };
 
         bspdel: bspace_del {
