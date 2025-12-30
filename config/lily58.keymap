@@ -35,7 +35,7 @@
         gresc: escape_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC><&grave_tilde>;
+            bindings = <&kp ESC>, <&grave_tilde>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
