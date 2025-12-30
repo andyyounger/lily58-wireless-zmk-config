@@ -35,7 +35,7 @@
         gresc: escape_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&GRAVE>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
 
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
 			keep-mods = <MOD_LSFT>;
