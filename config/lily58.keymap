@@ -31,7 +31,7 @@
             bindings = <&kp ESC>, <&kp GRAVE>;
 
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <MOD_LSFT>;
+            keep-mods = <MOD_LSFT|MOD_RSFT>;
         };
 
         bspdel: bspace_del {
