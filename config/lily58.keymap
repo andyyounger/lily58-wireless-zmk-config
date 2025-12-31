@@ -199,7 +199,7 @@
 &trans          &trans        &trans        &trans        &trans        &kp SYSREQ                                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
 &trans          &trans        &trans        &trans        &trans        &kp SCROLLLOCK                                   &kp LEFT_ARROW  &kp DOWN        &kp UP_ARROW  &kp RIGHT        &msc SCRL_DOWN  &trans
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &kp PRINTSCREEN  &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans          &trans
-                                            &trans        &mkp MB1      &mkp MB2         &trans           &trans         &mkp MB1        &mkp MB2        &trans
+                                            &trans        &mkp MB1      &mkp MB2         &mkp MB1         &trans         &mkp MB1        &mkp MB2        &trans
             >;
         };
 
