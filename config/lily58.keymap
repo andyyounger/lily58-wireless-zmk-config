@@ -220,10 +220,10 @@
 
         rsym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans                &trans                 &trans          &trans     &trans                &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL  &kp NON_US_BACKSLASH  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp PLUS   &kp PIPE              &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LBRC              &kp RBRC               &kp GRAVE       &kp TILDE  &kp SLASH             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans                &trans                 &trans          &trans     &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL  &kp BACKSLASH  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp PLUS   &kp PIPE       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LBRC              &kp RBRC               &kp GRAVE       &kp TILDE  &kp SLASH      &trans
                         &trans  &trans  &trans  &trans    &trans  &trans                &trans                 &trans
             >;
         };
