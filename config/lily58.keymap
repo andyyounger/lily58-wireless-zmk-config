@@ -137,7 +137,7 @@
         };
 
         toglay_rmagic {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <50 54>;
         };
 
@@ -152,7 +152,7 @@
         };
 
         toglay_num {
-            bindings = <&tog 2>;
+            bindings = <&tog 3>;
             key-positions = <50 55>;
         };
     };
