@@ -190,21 +190,21 @@
 
         lnum {
             bindings = <
-&trans  &trans     &trans        &trans        &trans        &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE  &kp N7        &kp NUMBER_8  &kp N9        &kp N0                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp MINUS  &kp NUMBER_4  &kp N5        &kp N6        &kp EQUAL                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SQT    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans        &trans        &trans     &trans    &trans  &trans  &trans  &trans
+&trans  &trans     &trans        &trans        &trans        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp GRAVE  &kp N7        &kp NUMBER_8  &kp N9        &kp N0                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp NUMBER_4  &kp N5        &kp N6        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
 
         lnsym {
             bindings = <
-&trans  &trans     &trans      &trans       &trans     &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp TILDE  &kp AMPS    &kp ASTRK    &kp LPAR   &kp RPAR                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp UNDER  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp PLUS                             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp EXCL    &kp AT       &kp HASH   &kp DOUBLE_QUOTES  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans       &trans     &trans             &trans    &trans  &trans  &trans  &trans
+&trans  &trans     &trans      &trans       &trans     &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp TILDE  &kp AMPS    &kp ASTRK    &kp LPAR   &kp RPAR                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp DOLLAR  &kp PERCENT  &kp CARET  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp EXCL    &kp AT       &kp HASH   &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans       &trans     &trans    &trans    &trans  &trans  &trans  &trans
             >;
         };
 
@@ -220,10 +220,10 @@
 
         rsym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans                &trans                 &trans          &trans     &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL  &kp BACKSLASH  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp PLUS   &kp PIPE       &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LBRC              &kp RBRC               &kp GRAVE       &kp TILDE  &kp SLASH      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans                &trans                 &trans            &trans             &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS         &kp UNDER          &kp BACKSLASH  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL         &kp PLUS           &kp PIPE       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LBRC              &kp RBRC               &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp SLASH      &trans
                         &trans  &trans  &trans  &trans    &trans  &trans                &trans                 &trans
             >;
         };
