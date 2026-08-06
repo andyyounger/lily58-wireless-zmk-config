@@ -170,21 +170,21 @@
 
             display-name = "Base";
             bindings = <
-&none  &trans              &trans              &trans                  &trans                &trans                                 &trans             &trans                 &trans                  &trans              &trans                       &none
-&none  &kp Q               &kp W               &kp E                   &kp R                 &kp T                                  &kp Y              &kp U                  &kp I                   &kp O               &kp P                        &none
-&none  &lhmini LEFT_GUI A  &lhmini LEFT_ALT S  &lhmini LEFT_CONTROL D  &lhmini LEFT_SHIFT F  &kp G                                  &kp H              &rhmini RIGHT_SHIFT J  &rhmini LEFT_CONTROL K  &rhmini LEFT_ALT L  &rhmini RIGHT_GUI SEMICOLON  &none
-&none  &kp Z               &kp X               &kp C                   &kp V                 &lt 4 B    &trans         &trans       &lt 3 N            &kp M                  &kp COMMA               &kp PERIOD          &kp SLASH                    &none
-                                               &none                   &none                 &lt 5 TAB  &lt 1 ENTER    &lt 1 SPACE  &lt_bspdel 2 BSPC  &none                  &none
+&trans  &trans              &trans              &trans                  &trans                &trans                                 &trans             &trans                 &trans                  &trans              &trans                       &trans
+&trans  &kp Q               &kp W               &kp E                   &kp R                 &kp T                                  &kp Y              &kp U                  &kp I                   &kp O               &kp P                        &trans
+&trans  &lhmini LEFT_GUI A  &lhmini LEFT_ALT S  &lhmini LEFT_CONTROL D  &lhmini LEFT_SHIFT F  &kp G                                  &kp H              &rhmini RIGHT_SHIFT J  &rhmini LEFT_CONTROL K  &rhmini LEFT_ALT L  &rhmini RIGHT_GUI SEMICOLON  &trans
+&trans  &kp Z               &kp X               &kp C                   &kp V                 &lt 4 B    &trans         &trans       &lt 3 N            &kp M                  &kp COMMA               &kp PERIOD          &kp SLASH                    &trans
+                                                &trans                  &trans                &lt 5 TAB  &lt 1 ENTER    &lt 1 SPACE  &lt_bspdel 2 BSPC  &trans                 &trans
             >;
         };
 
         rmagic {
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4                          &trans          &trans          &trans        &trans           &trans          &trans
-&trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp SYSREQ                            &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
-&trans          &trans             &trans           &trans                &trans                &kp SCROLLLOCK                        &kp LEFT_ARROW  &kp DOWN        &kp UP_ARROW  &kp RIGHT        &trans          &trans
-&bt BT_CLR_ALL  &trans             &trans           &trans                &trans                &kp PRINTSCREEN  &none     &none      &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &msc SCRL_DOWN  &trans
-                                                    &trans                &trans                &trans           &trans    &mkp LCLK  &mkp RCLK       &trans          &trans
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans          &trans          &trans        &trans           &trans          &trans
+&trans          &trans        &trans        &trans        &trans        &trans                             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
+&trans          &trans        &trans        &trans        &trans        &trans                             &kp LEFT_ARROW  &kp DOWN        &kp UP_ARROW  &kp RIGHT        &msc SCRL_DOWN  &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans        &trans    &trans     &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans          &trans
+                                            &trans        &trans        &trans        &trans    &mkp LCLK  &mkp RCLK       &trans          &trans
             >;
         };
 
