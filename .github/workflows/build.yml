@@ -1,5 +1,6 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  # Pinned: must match the revision in config/west.yml
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@641514a97db345f499dd50b0360e594270f008fe

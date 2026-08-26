@@ -5,7 +5,12 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      # Pinned to a known-good zmk mainline commit (main as of 2026-08-21,
+      # verified building 2026-08-26: Zephyr 4.1 / HWMv2).
+      # Same pin as the corne config; to follow newer mainline, use:
+      # revision: main, or pin a newer commit when v0.4 (first Zephyr 4.1
+      # release) tags.
+      revision: 641514a97db345f499dd50b0360e594270f008fe
       import: app/west.yml
   self:
     path: config
