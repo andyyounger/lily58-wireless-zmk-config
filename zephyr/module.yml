@@ -1,0 +1,12 @@
+# Zephyr "extra module" that adds custom ZMK behaviors to this config's firmware.
+#
+# The ZMK build picks this up automatically because this file exists:
+# the zmk build workflow passes -DZMK_EXTRA_MODULES=<this repo> to the build,
+# and Zephyr discovers modules via <module>/zephyr/module.yml.
+#
+# For local builds, make sure the CMake invocation includes:
+#   -DZMK_EXTRA_MODULES=<path to this repo>
+build:
+  cmake: .
+  settings:
+    dts_root: .

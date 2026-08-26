@@ -1,0 +1,8 @@
+# Copyright (c) 2026
+# SPDX-License-Identifier: MIT
+
+description: Send Escape and force the default layer (cancels any locked layer)
+
+compatible: "zmk,behavior-esc-to-base"
+
+include: zero_param.yaml

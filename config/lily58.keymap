@@ -42,6 +42,14 @@
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
+        // Custom behavior (see src/behavior_esc_to_base.c): sends ESC and
+        // forces the default layer, cancelling any layer locked via the
+        // stick keys.
+        esc_to_base: esc_to_base {
+            compatible = "zmk,behavior-esc-to-base";
+            #binding-cells = <0>;
+        };
+
         lt_bspdel: layer_tap_bspc_del {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_BACKSPACE_DELETE";
@@ -111,7 +119,7 @@
         compatible = "zmk,combos";
 
         thumbesc {
-            bindings = <&kp ESCAPE>;
+            bindings = <&esc_to_base>;
             key-positions = <54 53>;
             timeout-ms = <150>;
         };
