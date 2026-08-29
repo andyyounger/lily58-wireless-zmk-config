@@ -2,6 +2,16 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ *
+ * Layout mirrors the corne keymap (corne-wireless-view) onto the lily58:
+ *
+ *   corne row 1 -> lily row 2    corne row 2 -> lily row 3    corne row 3 -> lily row 4
+ *   lily top row (pos 0-11) is &trans on every layer
+ *   lily row-4 thumb keys (pos 42/43) are &trans on every layer
+ *
+ *   corne left  thumbs (outer->inner)  -> lily 51 52 53
+ *   corne right thumbs (inner->outer)  -> lily 54 55 56
+ *   lily 50 / 57 stay &trans
  */
 
 #include <behaviors.dtsi>
@@ -21,6 +31,20 @@
     tapping-term-ms = <280>;
     quick-tap-ms = <250>;
     flavor = "balanced";
+};
+
+// Mouse move: faster ramp (150ms), less aggressive acceleration
+
+&mmv {
+    time-to-max-speed-ms = <250>;
+    acceleration-exponent = <2>;
+};
+
+// Mouse scroll: faster ramp, linear
+
+&msc {
+    time-to-max-speed-ms = <250>;
+    acceleration-exponent = <2>;
 };
 
 / {
@@ -57,8 +81,8 @@
             #binding-cells = <2>;
             bindings = <&mo>, <&bspdel>;
 
-            quick-tap-ms = <200>;
-            tapping-term-ms = <225>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <250>;
         };
 
         td_lctrl_quote: td_lctrl_quote {
@@ -119,121 +143,170 @@
     combos {
         compatible = "zmk,combos";
 
+        // R E B T
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <16 15 41 17>;
+        };
+
+        // RET SPACE (both inner thumbs): ESC and force default layer.
         thumbesc {
             bindings = <&esc_to_base>;
-            key-positions = <54 53>;
+            key-positions = <53 54>;
             timeout-ms = <150>;
         };
 
-        bootloader {
-            bindings = <&bootloader>;
-            key-positions = <16 15 17 41>;
-        };
-
+        // F J
         capsword {
             bindings = <&caps_word>;
             key-positions = <28 31>;
         };
 
-        capslock {
-            bindings = <&kp CAPS>;
-            key-positions = <28 27 31 32>;
+        // D F J K
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <27 28 31 32>;
         };
 
-        toglay_fn {
-            bindings = <&tog 4>;
-            key-positions = <50 52>;
+        // B T C
+        btclear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <17 41 39>;
         };
 
-        toglay_rmagic {
-            bindings = <&tog 1>;
-            key-positions = <50 54>;
+        // B T Q
+        bt1 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <17 41 13>;
         };
 
-        toglay_esc {
-            bindings = <&to 0>;
-            key-positions = <50 0>;
+        // B T W
+        bt2 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <17 41 14>;
         };
 
-        toglay_lmagic {
-            bindings = <&tog 0>;
-            key-positions = <50 53>;
+        // B T E
+        bt3 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <17 41 15>;
         };
 
-        toglay_num {
-            bindings = <&tog 2>;
-            key-positions = <50 55>;
+        // B T R
+        bt4 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <17 41 16>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
+        // Key position order per row:
+        //   row1: 0-11            (all &trans on every layer)
+        //   row2: 12-17 | 18-23
+        //   row3: 24-29 | 30-35
+        //   row4: 36-41 | 42 | 43 | 44-49   (42/43 are &trans on every layer)
+        //   row5: 50-53 | 54-57
+
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  -   |  -   |  -   |  -   |  -   |  -   |
+            // |  -   |  Q   |  W   |  E   |  R   |  T   |                   |  Y   |  U   |  I   |  O   |  P   |  -   |
+            // |  -   |  A   |  S   |  D   |  F   |  G   |                   |  H   |  J   |  K   |  L   |  ;   |  -   |
+            // |  -   |  Z   |  X   |  C   |  V   |  B   |  -   |  -   |  N   |  M   |  ,   |  .   |  /   |  -   |
+            //                      |  -   | LT5 | LT4 | LT2 | LT1 | LT3/BSPC |  -  |  -   |
 
             display-name = "Base";
             bindings = <
-&graveesc         &kp N1              &kp N2              &kp N3                  &kp N4                &kp N5                                 &kp N6             &kp N7                 &kp N8                  &kp N9              &kp N0                       &kp BACKSPACE
-&kp TAB           &kp Q               &kp W               &kp E                   &kp R                 &kp T                                  &kp Y              &kp U                  &kp I                   &kp O               &kp P                        &kp BACKSLASH
-&sk LEFT_SHIFT    &lhmini LEFT_GUI A  &lhmini LEFT_ALT S  &lhmini LEFT_CONTROL D  &lhmini LEFT_SHIFT F  &kp G                                  &kp H              &rhmini RIGHT_SHIFT J  &rhmini LEFT_CONTROL K  &rhmini LEFT_ALT L  &rhmini RIGHT_GUI SEMICOLON  &mt RIGHT_SHIFT SQT
-&sk LEFT_CONTROL  &kp Z               &kp X               &kp C                   &kp V                 &kp B      &kp LBKT       &kp RBKT     &lt 3 N            &kp M                  &kp COMMA               &kp PERIOD          &kp SLASH                    &kp RIGHT_CONTROL
-                                                          &trans                  &trans                &lt 4 TAB  &lt 1 ENTER    &lt 1 SPACE  &lt_bspdel 2 BSPC  &trans                 &trans
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&trans           &kp Q                &kp W                &kp E                 &kp R                 &kp T                                    &kp Y             &kp U                &kp I                 &kp O                &kp P                 &trans
+&trans           &lhmini LEFT_GUI A   &lhmini LEFT_ALT S   &lhmini LEFT_CONTROL D  &lhmini LEFT_SHIFT F  &kp G                                   &kp H             &rhmini RIGHT_SHIFT J  &rhmini RIGHT_CONTROL K  &rhmini LEFT_ALT L   &rhmini LEFT_GUI SEMICOLON  &trans
+&trans           &kp Z                &kp X                &kp C                 &kp V                 &kp B        &trans          &trans          &kp N             &kp M             &kp COMMA            &kp DOT             &kp FSLH              &trans
+&trans           &lt 5 ESCAPE         &lt 4 TAB             &lt 2 RET             &lt 1 SPACE  &lt_bspdel 3 BSPC  &trans          &trans
             >;
         };
 
-        rmagic {
+        lower_layer {
+            // | TOG1 |  1   |  2   |  3   |  4   |  5   |                   |  6   |  7   |  8   |  9   |  0   | TOG1 |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  <-  |  v   |  ^   |  ->  |  -   |  -   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   | HOME | PGDN  | PGUP  | END |  -   |  -   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |
+            //                      |  -   |  -   |  -   |  -   |  -   |  -  |  -   |  -   |
+
+            display-name = "Lower";
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4                                     &trans          &trans          &trans        &trans           &trans          &trans
-&trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp SYSREQ                                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
-&trans          &trans             &trans           &trans                &trans                &kp SCROLLLOCK                                   &kp LEFT_ARROW  &kp DOWN        &kp UP_ARROW  &kp RIGHT        &trans          &trans
-&bt BT_CLR_ALL  &trans             &trans           &trans                &trans                &kp PRINTSCREEN  &kp LC(MINUS)    &kp LC(EQUAL)  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &msc SCRL_DOWN  &trans
-                                                    &tog 1                &trans                &mkp MB2         &mkp MB1         &trans         &trans          &trans          &trans
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&tog 1           &kp N1               &kp N2               &kp N3                &kp N4                &kp N5                                   &kp N6            &kp N7               &kp N8                &kp N9               &kp N0                &tog 1
+&trans           &trans               &trans               &trans                &trans                &trans                                   &kp LEFT          &kp DOWN             &kp UP                &kp RIGHT            &trans                &trans
+&trans           &trans               &trans               &trans                &trans                &trans        &trans          &trans          &kp HOME          &kp PAGE_DOWN       &kp PG_UP            &kp END             &trans                &trans
+&trans           &trans               &trans               &trans                &trans                &trans     &trans          &trans
             >;
         };
 
-        num {
+        raise_layer {
+            // | TOG2 |  !   |  @   |  #   |  $   |  %   |                   |  ^   |  &   |  *   |  (   |  )   | TOG2 |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  `   |  -   |  =   |  [   |  ]   |  \   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  ~   |  _   |  +   |  {   |  }   |  |   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |
+            //                      |  -   |  -   |  -   |  -   |  -   |  -  |  -   |  -   |
+
+            display-name = "Raise";
             bindings = <
-&trans  &trans            &trans        &trans        &trans        &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_BRACKET  &kp N7        &kp NUMBER_8  &kp N9        &kp RIGHT_BRACKET                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE         &kp NUMBER_4  &kp N5        &kp N6        &kp BACKSLASH                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp MINUS         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SINGLE_QUOTE   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                        &tog 2        &kp DOT       &kp N0             &kp EQUAL    &trans  &trans  &trans  &trans
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&tog 2           &kp EXCL             &kp AT               &kp HASH              &kp DLLR              &kp PRCNT                                &kp CARET         &kp AMPS             &kp KP_MULTIPLY       &kp LPAR             &kp RPAR             &tog 2
+&trans           &trans               &trans               &trans                &trans                &trans                                   &kp GRAVE         &kp MINUS            &kp EQUAL             &kp LBKT             &kp RBKT             &kp BSLH
+&trans           &trans               &trans               &trans                &trans                &trans        &trans          &trans          &kp TILDE         &kp UNDER           &kp PLUS             &kp LBRC            &kp RBRC             &kp PIPE
+&trans           &trans               &trans               &trans                &trans                &trans     &trans          &trans
             >;
         };
 
-        sym {
+        extra {
+            // | TOG3 | VOL- | BRI- |  -   |  -   |  -   |                   |  -   |  -   |  -   |  -   |  -   | TOG3 |
+            // |  -   | VOL+ | BRI+ |  -   |  -   |  -   |                   |  <-  |  v   |  ^   |  ->  |  -   |  -   |
+            // |  -   | MUTE |  -   |  -   |  -   |  -   |  -   |  -   |  v   |  ^   |  -   |  -   |  -   |  -   |
+            //                      |  -   |  -   | MB1 | MB2 | MB1 | MB2   |  -  |  -   |
+
+            display-name = "Extra";
             bindings = <
-&trans  &trans          &trans           &trans        &trans                &trans                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RBRC                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp TILDE       &kp DOLLAR       &kp PERCENT   &kp CARET             &kp PIPE                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp UNDERSCORE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp DOUBLE_QUOTES      &kp EQUAL    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                         &tog 3        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS     &trans  &trans  &trans  &trans
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&tog 3           &kp K_VOL_DN         &kp C_BRI_DEC        &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &tog 3
+&trans           &kp K_VOL_UP         &kp C_BRI_INC        &trans                &trans                &trans                                   &mmv MOVE_LEFT    &mmv MOVE_DOWN       &mmv MOVE_UP          &mmv MOVE_RIGHT      &trans                &trans
+&trans           &kp K_MUTE           &trans               &trans                &trans                &trans        &trans          &trans          &msc SCRL_DOWN    &msc SCRL_UP       &trans               &trans               &trans                &trans
+&trans           &trans               &mkp MB1              &mkp MB2              &mkp MB1   &mkp MB2         &trans          &trans
             >;
         };
 
         funcr {
+            // | TOG4 |  -   |  -   |  -   |  -   |  -   |                   |  F9  |  F10  |  F11  |  F12  | SYSRQ | TOG4 |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  F5  |  F6   |  F7   |  F8   |  SLCK |  -   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  F1  |  F2   |  F3   |  F4   |  PRSC |  -   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |
+            //                      |  -   |  -   |  -   |  -   |  -   |  -  |  -   |  -   |
+
+            display-name = "funcright";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans   &trans   &trans   &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp F9  &kp F10  &kp F11  &kp F12  &kp SYSREQ       &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp F5  &kp F6   &kp F7   &kp F8   &kp SCROLLLOCK   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp PRINTSCREEN  &trans
-                        &tog 4  &trans  &trans  &trans    &trans  &trans  &trans   &trans
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&tog 4           &trans               &trans               &trans                &trans                &trans                                   &kp F9            &kp F10              &kp F11               &kp F12              &kp SYSREQ            &tog 4
+&trans           &trans               &trans               &trans                &trans                &trans                                   &kp F5            &kp F6               &kp F7                &kp F8               &kp SCROLLLOCK        &trans
+&trans           &trans               &trans               &trans                &trans                &trans        &trans          &trans          &kp F1            &kp F2              &kp F3               &kp F4               &kp PRINTSCREEN       &trans
+&trans           &trans               &trans               &trans                &trans                &trans     &trans          &trans
+            >;
+        };
+
+        special {
+            // All &trans (only reachable as the LT5 layer via the left thumb).
+
+            display-name = "special";
+            bindings = <
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&trans           &trans               &trans               &trans                &trans                &trans                                   &trans            &trans               &trans                &trans               &trans                &trans
+&trans           &trans               &trans               &trans                &trans                &trans        &trans          &trans          &trans            &trans              &trans               &trans               &trans                &trans
+&trans           &trans               &trans               &trans                &trans                &trans     &trans          &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        /*     num2sym { */
-        /*         if-layers = <4 5>; */
-        /*         then-layer = <6>; */
-        /*     }; */
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
