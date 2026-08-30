@@ -322,7 +322,7 @@
             >;
         };
 
-        special {
+        lnum {
             // TOG5 at both ends of rows 0-1, rest &trans (also reachable as LT5 via the left thumb).
 
             display-name = "lnum";
