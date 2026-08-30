@@ -325,13 +325,13 @@
         special {
             // TOG5 at both ends of rows 0-1, rest &trans (also reachable as LT5 via the left thumb).
 
-            display-name = "special";
+            display-name = "lnum";
             bindings = <
-&tog 5  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &tog 5
-&tog 5  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &tog 5
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&tog 5  &trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &tog 5
+&tog 5  &trans  &kp N7  &kp N8  &kp N9  &kp N0                         &trans  &trans  &trans  &trans  &trans  &tog 5
+&trans  &trans  &kp N4  &kp N5  &kp N6  &kp MINUS                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &kp KP_PLUS  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
