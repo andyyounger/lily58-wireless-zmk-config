@@ -250,7 +250,7 @@
 &trans  &kp Q           &kp W           &kp E            &kp R             &kp T                                &kp Y              &kp U             &kp I            &kp O           &kp P                   &trans
 &trans  &lhmini LGUI A  &lhmini LALT S  &lhmini LCTRL D  &lhmini LSHIFT F  &kp G                                &kp H              &rhmini RSHIFT J  &rhmini LCTRL K  &rhmini LALT L  &rhmini LGUI SEMICOLON  &trans
 &trans  &kp Z           &kp X           &kp C            &kp V             &kp B      &trans       &trans       &kp N              &kp M             &kp COMMA        &kp DOT         &kp FSLH                &trans
-                                        &trans           &lt 3 ESC         &lt 4 TAB  &lt 2 RET    &lt 1 SPACE  &lt_bspdel 2 BSPC  &lt 5 ESC         &trans
+                                        &trans           &lt 3 ESC         &lt 4 TAB  &lt 2 RET    &lt 1 SPACE  &lt_bspdel 2 BSPC  &lt 5 SPACE       &trans
             >;
         };
 
