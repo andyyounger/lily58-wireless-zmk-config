@@ -1,0 +1,29 @@
+# Enable MPU
+CONFIG_ARM_MPU=y
+
+# Enable hardware stack protection
+CONFIG_HW_STACK_PROTECTION=y
+
+# Enable GPIO
+CONFIG_GPIO=y
+
+# Link the app into the DT code partition (0x1000, after the UF2 MBR)
+CONFIG_USE_DT_CODE_PARTITION=y
+
+# The USB nrfx driver overwrites this option from its imply; keep it off
+# explicitly so we match what the ZMK nRF52840 boards do.
+CONFIG_USB_DEVICE_REMOTE_WAKEUP=n
+
+# HID transports
+CONFIG_USB_DEVICE_STACK=y
+CONFIG_USB_NRFX=y
+CONFIG_ZMK_BLE=y
+CONFIG_ZMK_USB=y
+
+# Settings options
+CONFIG_MPU_ALLOW_FLASH_WRITE=y
+CONFIG_NVS=y
+CONFIG_SETTINGS_NVS=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
+CONFIG_FLASH_MAP=y
