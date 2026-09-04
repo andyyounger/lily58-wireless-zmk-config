@@ -17,6 +17,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -223,6 +224,13 @@
         bt4_ {
             bindings = <&bt BT_SEL 3>;
             key-positions = <17 41 4>;
+        };
+
+        // B T O: toggle output between USB (dongle) and BLE (active profile's host)
+
+        btout {
+            bindings = <&out OUT_TOG>;
+            key-positions = <17 41 21>;
         };
     };
 
