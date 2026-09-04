@@ -232,6 +232,13 @@
             bindings = <&out OUT_TOG>;
             key-positions = <17 41 21>;
         };
+
+        // B T Z: same as B T O, one-handed (left) variant
+
+        btz {
+            bindings = <&out OUT_TOG>;
+            key-positions = <17 41 37>;
+        };
     };
 
     keymap {
