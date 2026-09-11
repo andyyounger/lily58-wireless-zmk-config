@@ -17,8 +17,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 &lt {
@@ -278,10 +278,10 @@
 
             display-name = "Lower";
             bindings = <
-&tog 1  &trans  &trans  &trans  &trans  &trans                    &trans    &trans     &trans     &trans     &trans   &tog 1
-&tog 1  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0   &tog 1
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SQT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans   &trans
+&tog 1  &trans  &trans  &trans  &trans  &trans                    &trans    &trans     &trans     &trans     &trans  &tog 1
+&tog 1  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0  &tog 1
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans
             >;
         };
@@ -295,10 +295,10 @@
 
             display-name = "Raise";
             bindings = <
-&tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &tog 2
-&tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &tog 2
-&trans  &trans    &trans  &trans    &trans    &kp GRAVE                    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &trans
-&trans  &trans    &trans  &trans    &trans    &kp TILDE  &trans    &trans  &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &trans
+&tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR              &tog 2
+&tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR              &tog 2
+&trans  &trans    &trans  &trans    &trans    &kp GRAVE                    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp SQT               &trans
+&trans  &trans    &trans  &trans    &trans    &kp TILDE  &trans    &trans  &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp NON_US_BACKSLASH  &trans
                           &trans    &trans    &trans     &trans    &trans  &trans     &trans     &trans
             >;
         };
