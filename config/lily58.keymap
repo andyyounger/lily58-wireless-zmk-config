@@ -297,8 +297,8 @@
             bindings = <
 &tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR       &tog 2
 &tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR       &tog 2
-&trans  &trans    &trans  &trans    &trans    &kp GRAVE                    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp SQT        &trans
-&trans  &trans    &trans  &trans    &trans    &kp TILDE  &trans    &trans  &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp BACKSLASH  &trans
+&trans  &trans    &trans  &trans    &trans    &trans                       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp SQT        &trans
+&trans  &trans    &trans  &trans    &trans    &trans     &trans    &trans  &kp GRAVE  &kp PLUS   &kp LBRC         &kp RBRC  &kp BACKSLASH  &trans
                           &trans    &trans    &trans     &trans    &trans  &trans     &trans     &trans
             >;
         };
