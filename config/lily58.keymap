@@ -364,11 +364,11 @@
         Sym {
             display-name = "Sym";
             bindings = <
-&tog 7  &trans     &trans                   &trans                 &trans                &trans                                   &trans              &trans             &trans                           &trans                        &trans            &tog 7
-&tog 7  &kp TILDE  &kp AMPERSAND            &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp MINUS           &kp EQUAL          &kp LEFT_BRACKET                 &kp RIGHT_BRACKET             &kp BACKSLASH     &tog 7
-&trans  &trans     &lhmini LEFT_ALT DOLLAR  &lhmini LCTRL PERCENT  &lhmini LSHFT CARET   &trans                                   &kp LC(UNDERSCORE)  &rhmini PLUS PLUS  &rhmini LEFT_CONTROL LEFT_BRACE  &rhmini LEFT_ALT RIGHT_BRACE  &rhmini LWIN SQT  &trans
-&trans  &trans     &kp EXCLAMATION          &kp AT_SIGN            &kp HASH              &trans                 &trans    &trans  &trans              &trans             &trans                           &trans                        &trans            &trans
-                                            &trans                 &trans                &trans                 &trans    &trans  &trans              &trans             &trans
+&tog 7  &trans     &trans                   &trans                 &trans                &trans                                   &trans          &trans             &trans                           &trans                        &trans            &tog 7
+&tog 7  &kp TILDE  &kp AMPERSAND            &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp MINUS       &kp EQUAL          &kp LEFT_BRACKET                 &kp RIGHT_BRACKET             &kp BACKSLASH     &tog 7
+&trans  &trans     &lhmini LEFT_ALT DOLLAR  &lhmini LCTRL PERCENT  &lhmini LSHFT CARET   &trans                                   &kp UNDERSCORE  &rhmini PLUS PLUS  &rhmini LEFT_CONTROL LEFT_BRACE  &rhmini LEFT_ALT RIGHT_BRACE  &rhmini LWIN SQT  &trans
+&trans  &trans     &kp EXCLAMATION          &kp AT_SIGN            &kp HASH              &trans                 &trans    &trans  &trans          &trans             &trans                           &trans                        &trans            &trans
+                                            &trans                 &trans                &trans                 &trans    &trans  &trans          &trans             &trans
             >;
         };
     };
