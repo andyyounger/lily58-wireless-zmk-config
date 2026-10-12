@@ -265,7 +265,46 @@
 &trans     &kp Q           &kp W           &kp E            &kp R             &kp T                                      &kp Y              &kp U             &kp I            &kp O           &kp P                   &trans
 &kp LCTRL  &lhmini LGUI A  &lhmini LALT S  &lhmini LCTRL D  &lhmini LSHIFT F  &lhmini LC(B) G                            &rhmini LC(B) H    &rhmini RSHIFT J  &rhmini LCTRL K  &rhmini LALT L  &rhmini LGUI SEMICOLON  &kp RCTRL
 &kp LSHFT  &kp Z           &kp X           &kp C            &kp V             &kp B            &trans       &trans       &kp N              &kp M             &kp COMMA        &kp DOT         &kp FSLH                &kp RSHFT
-                                           &trans           &trans            &lt 7 TAB        &lt 4 RET    &lt 6 SPACE  &lt_bspdel 7 BSPC  &trans            &trans
+                                           &trans           &trans            &lt 1 TAB        &lt 3 RET    &lt 2 SPACE  &lt_bspdel 1 BSPC  &trans            &trans
+            >;
+        };
+
+        Sym {
+            display-name = "Sym";
+            bindings = <
+&tog 1  &trans     &trans                   &trans                 &trans                &trans                                   &trans          &trans               &trans                           &trans                        &trans            &tog 1
+&tog 1  &kp TILDE  &kp AMPERSAND            &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp MINUS       &kp EQUAL            &kp LEFT_BRACKET                 &kp RIGHT_BRACKET             &kp BACKSLASH     &tog 1
+&trans  &trans     &lhmini LEFT_ALT DOLLAR  &lhmini LCTRL PERCENT  &lhmini LSHFT CARET   &trans                                   &kp UNDERSCORE  &rhmini LSHIFT PLUS  &rhmini LEFT_CONTROL LEFT_BRACE  &rhmini LEFT_ALT RIGHT_BRACE  &rhmini LWIN SQT  &trans
+&trans  &trans     &kp EXCLAMATION          &kp AT_SIGN            &kp HASH              &trans                 &trans    &trans  &trans          &trans               &trans                           &trans                        &trans            &trans
+                                            &trans                 &trans                &trans                 &trans    &trans  &trans          &trans               &trans
+            >;
+        };
+
+        cursornum {
+            display-name = "curnum";
+            bindings = <
+&tog 2  &trans     &trans                 &trans            &trans                  &trans                           &trans          &trans          &trans        &trans           &trans          &tog 2
+&tog 2  &kp GRAVE  &kp N7                 &kp N8            &kp N9                  &kp N0                           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP    &tog 2
+&trans  &trans     &lhmini LALT NUMBER_4  &lhmini LCTRL N5  &lhmini LSHFT NUMBER_6  &kp MINUS                        &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans          &trans
+&trans  &trans     &kp NUMBER_1           &kp NUMBER_2      &kp NUMBER_3            &kp EQUAL  &trans      &trans    &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &msc SCRL_DOWN  &trans
+                                          &trans            &trans                  &mkp MB1   &mkp MB2    &mkp MB1  &mkp MB2        &trans          &trans
+            >;
+        };
+
+        funcr {
+            // | TOG4 |  -   |  -   |  -   |  -   |  -   |                   |  -   |  -   |  -   |  -   |  -   | TOG4 |
+            // | TOG4 |  -   |  -   |  -   |  -   |  -   |                   |  F9  |  F10  |  F11  |  F12  | SYSRQ | TOG4 |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  F5  |  F6   |  F7   |  F8   |  SLCK |  -   |
+            // |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |   F1   |  F2   |  F3   |  F4   | PRSC  |  -   |
+            //                      |  -   |  -   |  -   |  -   |  -   |  -  |  -   |  -   |
+
+            display-name = "funcright";
+            bindings = <
+&tog 3  &trans               &trans           &trans            &trans             &trans                    &trans  &trans            &trans            &trans               &trans  &tog 3
+&tog 3  &kp F9               &kp F10          &kp F11           &kp F12            &trans                    &kp F9  &kp F10           &kp F11           &kp F12              &trans  &tog 3
+&trans  &lhmini LEFT_WIN F5  &lhmini LALT F6  &lhmini LCTRL F7  &lhmini LSHIFT F8  &trans                    &kp F5  &rhmini LSHFT F6  &rhmini LCTRL F7  &rhmini LEFT_ALT F8  &trans  &trans
+&trans  &kp F1               &kp F2           &kp F3            &kp F4             &trans  &trans    &trans  &kp F1  &kp F2            &kp F3            &kp F4               &trans  &trans
+                                              &trans            &trans             &trans  &trans    &trans  &trans  &trans            &trans
             >;
         };
 
@@ -278,8 +317,8 @@
 
             display-name = "Lower";
             bindings = <
-&tog 1  &trans  &trans  &trans  &trans  &trans                    &trans    &trans     &trans     &trans     &trans  &tog 1
-&tog 1  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0  &tog 1
+&tog 4  &trans  &trans  &trans  &trans  &trans                    &trans    &trans     &trans     &trans     &trans  &tog 4
+&tog 4  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0  &tog 4
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans
@@ -295,8 +334,8 @@
 
             display-name = "Raise";
             bindings = <
-&tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET            &kp AMPS                  &kp KP_MULTIPLY                    &kp LPAR                        &kp RPAR          &tog 2
-&tog 2  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET            &kp AMPS                  &kp KP_MULTIPLY                    &kp LPAR                        &kp RPAR          &tog 2
+&tog 5  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET            &kp AMPS                  &kp KP_MULTIPLY                    &kp LPAR                        &kp RPAR          &tog 5
+&tog 5  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET            &kp AMPS                  &kp KP_MULTIPLY                    &kp LPAR                        &kp RPAR          &tog 5
 &trans  &trans    &trans  &trans    &trans    &trans                       &rhmini LC(B) MINUS  &rhmini LEFT_SHIFT EQUAL  &rhmini LEFT_CONTROL LEFT_BRACKET  &rhmini LEFT_ALT RIGHT_BRACKET  &rhmini LWIN SQT  &trans
 &trans  &trans    &trans  &trans    &trans    &trans     &trans    &trans  &kp GRAVE            &kp PLUS                  &kp LBRC                           &kp RBRC                        &kp BACKSLASH     &trans
                           &trans    &trans    &trans     &trans    &trans  &trans               &trans                    &trans
@@ -312,28 +351,11 @@
 
             display-name = "Extra";
             bindings = <
-&tog 3  &trans  &trans  &trans  &trans  &trans                          &trans          &trans          &trans        &trans           &trans  &tog 3
-&tog 3  &trans  &trans  &trans  &trans  &trans                          &trans          &trans          &trans        &trans           &trans  &tog 3
+&tog 6  &trans  &trans  &trans  &trans  &trans                          &trans          &trans          &trans        &trans           &trans  &tog 6
+&tog 6  &trans  &trans  &trans  &trans  &trans                          &trans          &trans          &trans        &trans           &trans  &tog 6
 &trans  &trans  &trans  &trans  &trans  &trans                          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans    &trans          &msc SCRL_DOWN  &msc SCRL_UP  &trans           &trans  &trans
                         &trans  &trans  &mkp MB1  &mkp MB2    &mkp MB1  &mkp MB2        &trans          &trans
-            >;
-        };
-
-        funcr {
-            // | TOG4 |  -   |  -   |  -   |  -   |  -   |                   |  -   |  -   |  -   |  -   |  -   | TOG4 |
-            // | TOG4 |  -   |  -   |  -   |  -   |  -   |                   |  F9  |  F10  |  F11  |  F12  | SYSRQ | TOG4 |
-            // |  -   |  -   |  -   |  -   |  -   |  -   |                   |  F5  |  F6   |  F7   |  F8   |  SLCK |  -   |
-            // |  -   |  -   |  -   |  -   |  -   |  -   |  -   |  -   |   F1   |  F2   |  F3   |  F4   | PRSC  |  -   |
-            //                      |  -   |  -   |  -   |  -   |  -   |  -  |  -   |  -   |
-
-            display-name = "funcright";
-            bindings = <
-&tog 4  &trans  &trans  &trans  &trans  &trans                    &trans            &trans            &trans            &trans               &trans                 &tog 4
-&tog 4  &trans  &trans  &trans  &trans  &trans                    &kp F9            &kp F10           &kp F11           &kp F12              &kp SYSREQ             &tog 4
-&trans  &trans  &trans  &trans  &trans  &trans                    &rhmini LC(B) F5  &rhmini LSHFT F6  &rhmini LCTRL F7  &rhmini LEFT_ALT F8  &rhmini LEFT_WIN SLCK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1            &kp F2            &kp F3            &kp F4               &kp PSCRN              &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans            &trans            &trans
             >;
         };
 
@@ -342,33 +364,11 @@
 
             display-name = "lnum";
             bindings = <
-&tog 5  &trans  &trans                     &trans                  &trans                  &trans                                 &trans  &trans  &trans  &trans  &trans  &tog 5
-&tog 5  &trans  &kp N7                     &kp N8                  &kp N9                  &kp N0                                 &trans  &trans  &trans  &trans  &trans  &tog 5
+&tog 7  &trans  &trans                     &trans                  &trans                  &trans                                 &trans  &trans  &trans  &trans  &trans  &tog 7
+&tog 7  &trans  &kp N7                     &kp N8                  &kp N9                  &kp N0                                 &trans  &trans  &trans  &trans  &trans  &tog 7
 &trans  &trans  &lhmini LEFT_ALT NUMBER_4  &lhmini LCTRL NUMBER_5  &lhmini LSHFT NUMBER_6  &lhmini LC(B) MINUS                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp N1                     &kp N2                  &kp N3                  &kp EQUAL            &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                            &trans                  &trans                  &trans               &trans    &trans  &trans  &trans  &trans
-            >;
-        };
-
-        cursornum {
-            display-name = "curnum";
-            bindings = <
-&tog 6  &trans     &trans                 &trans            &trans                  &trans                           &trans          &trans          &trans        &trans           &trans          &tog 6
-&tog 6  &kp GRAVE  &kp N7                 &kp N8            &kp N9                  &kp N0                           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_UP    &tog 6
-&trans  &trans     &lhmini LALT NUMBER_4  &lhmini LCTRL N5  &lhmini LSHFT NUMBER_6  &kp MINUS                        &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans          &trans
-&trans  &trans     &kp NUMBER_1           &kp NUMBER_2      &kp NUMBER_3            &kp EQUAL  &trans      &trans    &kp HOME        &kp PG_DN       &kp PG_UP     &kp END          &msc SCRL_DOWN  &trans
-                                          &trans            &trans                  &mkp MB1   &mkp MB2    &mkp MB1  &mkp MB2        &trans          &trans
-            >;
-        };
-
-        Sym {
-            display-name = "Sym";
-            bindings = <
-&tog 7  &trans     &trans                   &trans                 &trans                &trans                                   &trans          &trans               &trans                           &trans                        &trans            &tog 7
-&tog 7  &kp TILDE  &kp AMPERSAND            &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp MINUS       &kp EQUAL            &kp LEFT_BRACKET                 &kp RIGHT_BRACKET             &kp BACKSLASH     &tog 7
-&trans  &trans     &lhmini LEFT_ALT DOLLAR  &lhmini LCTRL PERCENT  &lhmini LSHFT CARET   &trans                                   &kp UNDERSCORE  &rhmini LSHIFT PLUS  &rhmini LEFT_CONTROL LEFT_BRACE  &rhmini LEFT_ALT RIGHT_BRACE  &rhmini LWIN SQT  &trans
-&trans  &trans     &kp EXCLAMATION          &kp AT_SIGN            &kp HASH              &trans                 &trans    &trans  &trans          &trans               &trans                           &trans                        &trans            &trans
-                                            &trans                 &trans                &trans                 &trans    &trans  &trans          &trans               &trans
             >;
         };
     };
