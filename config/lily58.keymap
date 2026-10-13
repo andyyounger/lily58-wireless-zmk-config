@@ -261,11 +261,11 @@
 
             display-name = "Base";
             bindings = <
-&trans     &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                                     &kp N6             &kp N7            &kp N8           &kp N9          &kp N0                  &trans
-&trans     &kp Q           &kp W           &kp E            &kp R             &kp T                                      &kp Y              &kp U             &kp I            &kp O           &kp P                   &trans
-&kp LCTRL  &lhmini LGUI A  &lhmini LALT S  &lhmini LCTRL D  &lhmini LSHIFT F  &lhmini LC(B) G                            &rhmini LC(B) H    &rhmini RSHIFT J  &rhmini LCTRL K  &rhmini LALT L  &rhmini LGUI SEMICOLON  &kp RCTRL
-&kp LSHFT  &kp Z           &kp X           &kp C            &kp V             &kp B            &trans       &trans       &kp N              &kp M             &kp COMMA        &kp DOT         &kp FSLH                &kp RSHFT
-                                           &trans           &trans            &lt 1 TAB        &lt 3 RET    &lt 2 SPACE  &lt_bspdel 1 BSPC  &trans            &trans
+&trans            &kp N1          &kp N2          &kp N3           &kp N4            &kp N5                                     &kp N6             &kp N7            &kp N8           &kp N9          &kp N0                  &trans
+&trans            &kp Q           &kp W           &kp E            &kp R             &kp T                                      &kp Y              &kp U             &kp I            &kp O           &kp P                   &trans
+&mt LCTRL ESCAPE  &lhmini LGUI A  &lhmini LALT S  &lhmini LCTRL D  &lhmini LSHIFT F  &lhmini LC(B) G                            &rhmini LC(B) H    &rhmini RSHIFT J  &rhmini LCTRL K  &rhmini LALT L  &rhmini LGUI SEMICOLON  &mt RCTRL ENTER
+&kp LSHFT         &kp Z           &kp X           &kp C            &kp V             &kp B            &trans       &trans       &kp N              &kp M             &kp COMMA        &kp DOT         &kp FSLH                &kp RSHFT
+                                                  &trans           &trans            &lt 1 TAB        &lt 3 RET    &lt 2 SPACE  &lt_bspdel 1 BSPC  &trans            &trans
             >;
         };
 
